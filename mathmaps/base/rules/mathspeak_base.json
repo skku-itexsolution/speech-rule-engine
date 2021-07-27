@@ -680,6 +680,38 @@
     ],
     [
       "Precondition",
+      "relseq_ko_1",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()='≥'"
+    ],
+    [
+      "Precondition",
+      "relseq_ko_2",
+      "default",
+      "self::relseq", 
+      "count(./children/*)=2",
+      "text()='≤'"
+    ],
+    [
+      "Precondition",
+      "relseq_ko_3",
+      "default",
+      "self::relseq", 
+      "count(./children/*)=2",
+      "text()='>'"
+    ],
+    [
+      "Precondition",
+      "relseq_ko_4",
+      "default",
+      "self::relseq", 
+      "count(./children/*)=2",
+      "text()='<'"
+    ],
+    [
+      "Precondition",
       "equality",
       "default",
       "self::relseq",

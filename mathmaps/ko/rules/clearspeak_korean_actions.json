@@ -931,35 +931,23 @@
     ],
     [
       "Action",
-      "relseq",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크거나 같다\"",
-      "self::relseq", 
-      "count(./children/*)=2",
-      "text()='≥'"
+      "relseq_ko_1",
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크거나 같다\""
     ],
     [
       "Action",
-      "relseq",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작거나 같다\"",
-      "self::relseq", 
-      "count(./children/*)=2",
-      "text()='≤'"
+      "relseq_ko_2",
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작거나 같다\""
     ],
     [
       "Action",
-      "relseq",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크다\"",
-      "self::relseq", 
-      "count(./children/*)=2",
-      "text()='>'"
+      "relseq_ko_3",
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크다\""
     ],
     [
       "Action",
-      "relseq",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작다\"",
-      "self::relseq", 
-      "count(./children/*)=2",
-      "text()='<'"
+      "relseq_ko_4",
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작다\""
     ],
     [
       "Action",
