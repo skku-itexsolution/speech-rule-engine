@@ -104,7 +104,7 @@ namespace AuralRendering {
   export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
 
-    var searchvalue = "등호";
+    var searchvalue = " 등호";
     let pos = 0;
     while (true) {
         let foundPos = str.indexOf(searchvalue, pos);
