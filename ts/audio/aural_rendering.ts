@@ -109,7 +109,7 @@ namespace AuralRendering {
     while (true) {
         let foundPos = str.indexOf(searchvalue, pos);
         if (foundPos == -1) break;
-        str = str.replace(searchvalue, checkPreviousChar(str[foundPos - 2]));
+        str = str.replace(searchvalue, checkPreviousChar(str[foundPos - 1]));
         pos = foundPos + 1; 
     }
 
