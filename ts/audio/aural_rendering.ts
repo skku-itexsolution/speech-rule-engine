@@ -103,12 +103,27 @@ namespace AuralRendering {
    */
   export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
+
+    var searchvalue = "등호";
+    let pos = 0;
+    while (true) {
+        let foundPos = str.indexOf(searchvalue, pos);
+        if (foundPos == -1) break;
+        str = str.replace(searchvalue, isEndWithConsonant(str[foundPos - 2]));
+        pos = foundPos + 1; 
+    }
+    
     if (!renderer) {
       return str;
     }
     return renderer.finalize(str);
   }
 
+  export function isEndWithConsonant(korStr: string) {
+    const finalChrCode = korStr.charCodeAt(korStr.length - 1)
+    const finalConsonantCode = (finalChrCode - 44032) % 28
+    return finalConsonantCode !== 0 ? "은" : "는";
+  }
 
   /**
    * @override
