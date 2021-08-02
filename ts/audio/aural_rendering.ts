@@ -109,21 +109,27 @@ namespace AuralRendering {
     while (true) {
         let foundPos = str.indexOf(searchvalue, pos);
         if (foundPos == -1) break;
-        str = str.replace(searchvalue, isEndWithConsonant(str[foundPos - 2]));
+        str = str.replace(searchvalue, checkPreviousChar(str[foundPos - 2]));
         pos = foundPos + 1; 
     }
-    
+
     if (!renderer) {
       return str;
     }
     return renderer.finalize(str);
   }
 
-  export function isEndWithConsonant(korStr: string) {
-    const finalChrCode = korStr.charCodeAt(korStr.length - 1)
-    const finalConsonantCode = (finalChrCode - 44032) % 28
+  export function checkPreviousChar(char: string) {
+    const preCharC = char.charCodeAt(char.length - 1);
+    const finalConsonantCode = (preCharC - 44032) % 28;
+    if(char.match(/[a-z]/i)){
+      if (char === 'r' || char === 'l' || char === 'n' || char === 'm')
+          return "은";
+      return "는";
+    }
     return finalConsonantCode !== 0 ? "은" : "는";
   }
+
 
   /**
    * @override
