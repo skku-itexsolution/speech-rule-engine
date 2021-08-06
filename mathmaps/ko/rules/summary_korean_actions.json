@@ -121,12 +121,12 @@
     [
       "Action",
       "abstr-simple-root-end",
-      "[n] CSFindexRadicalVerbose"
+      "[t] CSFindexRadicalVerbose"
     ],
     [
       "Action",
       "abstr-simple-root",
-      "[n] CSFindexRadicalSbrief"
+      "[t] CSFindexRadicalSbrief"
     ],
     [
       "Action",
@@ -136,12 +136,12 @@
     [
       "Action",
       "abstr-simple-root-nested-end",
-      "[t] \"중첩\"; [n] CSFindexRadicalVerbose"
+      "[t] \"중첩\"; [t] CSFindexRadicalVerbose"
     ],
     [
       "Action",
       "abstr-simple-root-nested",
-      "[t] \"중첩\"; [n] CSFindexRadicalSbrief"
+      "[t] \"중첩\"; [t] CSFindexRadicalSbrief"
     ],
     [
       "Action",
