@@ -5,9 +5,9 @@ name: Tests
 
 on:
   push:
-    branches: [ zorkow ]
+    branches: [ summary-test ]
   pull_request:
-    branches: [ develop ]
+    branches: [ zorkow ]
 
 jobs:
   setup:
