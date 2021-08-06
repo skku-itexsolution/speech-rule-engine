@@ -59,7 +59,9 @@ export function OtherRules() {
         'CSFdecreasedOrdinalConversion': MathspeakKoreanUtil.decreasedOrdinalConversion,
         'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion,
         "CQFisSimpleIndex": MathspeakKoreanUtil.isSimpleIndex,
-      "CSFsimpleIndexRadicalVerbose": MathspeakKoreanUtil.simpleIndexRadicalVerbose,
+        "CSFsimpleIndexRadicalVerbose": MathspeakKoreanUtil.simpleIndexRadicalVerbose,
+        "CSFsimpleIndexRadicalBrief": MathspeakKoreanUtil.simpleIndexRadicalBrief,
+      "CSFsimpleIndexRadicalSbrief": MathspeakKoreanUtil.simpleIndexRadicalSbrief
       });
 }
 
