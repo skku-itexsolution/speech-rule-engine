@@ -351,22 +351,22 @@
     ],    [
       "Action",
       "relBE",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크거나 같다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크거나 같다\""
     ],
     [
       "Action",
       "relSE",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작거나 같다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작거나 같다\""
     ],
     [
       "Action",
       "relB",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크다\""
     ],
     [
       "Action",
       "relS",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"는\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작다\""
     ],
     [
       "Action",
