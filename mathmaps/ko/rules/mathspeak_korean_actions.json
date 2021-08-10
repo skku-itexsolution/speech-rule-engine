@@ -361,7 +361,7 @@
     [
       "Action",
       "relB",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [n] content/*[1][\"word\"]; [n] content/*[1][\"verb\"]"
+      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [n] content/*[1][1]; [n] content/*[1][1]"
     ],
     [
       "Action",
