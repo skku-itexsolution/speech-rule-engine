@@ -174,7 +174,7 @@
         "default": "크다"
       },
       "clearspeak": {
-        "default": "크다"
+        "default": {"word" : "보다", "verb" : "크다"}
       }
     },
     "key": "003E"
