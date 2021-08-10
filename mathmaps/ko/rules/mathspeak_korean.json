@@ -78,6 +78,38 @@
       "self::infixop",
       "children/*[1][@role=\"unit\"]",
       "children/*[1][@category=\"unit:currency\"]"
+    ],
+    [
+      "Precondition",
+      "relBE",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()='≥'"
+    ],
+    [
+      "Precondition",
+      "relSE",
+      "default",
+      "self::relseq", 
+      "count(./children/*)=2",
+      "text()='≤'"
+    ],
+    [
+      "Precondition",
+      "relB",
+      "default",
+      "self::relseq", 
+      "count(./children/*)=2",
+      "text()='>'"
+    ],
+    [
+      "Precondition",
+      "relS",
+      "default",
+      "self::relseq", 
+      "count(./children/*)=2",
+      "text()='<'"
     ]
   ]
 }
