@@ -361,7 +361,7 @@
     [
       "Action",
       "relB",
-      "[n] content/*[1]/[\"word\"]; [n] content/*[1]/[\"verb\"]; [m] children/*[1] (sepFunc:CTFcontentIterator); [n] content/*[1]/*[1]; [n] content/*[1]/*[2]; [t] \"은(는)\"; [n] content/*[1]/[1]; [n] content/*[1]/[2]; [m] children/*[2] (sepFunc:CTFcontentIterator); [n] content/*[1]/*[\"word\"]; [n] content/*[1]/*[\"verb\"]"
+      "[n] content/*[1]/content/*[1]; [n] content/*[1]/content/*[2]; [m] children/*[1] (sepFunc:CTFcontentIterator); [n] content/*[1]/*[1]; [n] content/*[1]/*[2]; [t] \"은(는)\"; [n] content/*[1]/[1]; [n] content/*[1]/[2]; [m] children/*[2] (sepFunc:CTFcontentIterator); [n] content/*[1]/*[\"word\"]; [n] content/*[1]/*[\"verb\"]"
     ],
     [
       "Action",
