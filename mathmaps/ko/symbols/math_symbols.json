@@ -171,10 +171,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크다"
+        "default": {"word" : "보다", "verb" : "크다"}
       },
       "clearspeak": {
-        "default": {"word" : "보다", "verb" : "크다"}
+        "default": "보다 크다"
       }
     },
     "key": "003E"
