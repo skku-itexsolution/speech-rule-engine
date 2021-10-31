@@ -182,7 +182,7 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\"≠\"",
-      ""
+      "CGFdepthConstraint"
     ],
     [
       "Precondition",
