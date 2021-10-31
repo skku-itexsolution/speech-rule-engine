@@ -307,6 +307,19 @@ export function decreasedOrdinalConversion(node: Element): string {
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
 }
 
+/**
+ * Generate a constraint that cancels mathspeak rules
+ * according to the depth of the tree.
+ * @param node The current node
+ * @return The constraint string.
+ */
+ export function generateDepthConstraint(node: Element): string[] {
+
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  let content = XpathUtil.evalXPath('content/*', node) as Element[];
+
+  return ['text()!=\"≠\"'];
+}
 
 }
 export default MathspeakKoreanUtil;

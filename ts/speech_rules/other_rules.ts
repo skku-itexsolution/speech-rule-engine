@@ -58,7 +58,8 @@ export function OtherRules() {
       'ko.summary.', 'ko.speech.mathspeak', { 
         'CSFordinalConversion': MathspeakKoreanUtil.ordinalConversion,
         'CSFdecreasedOrdinalConversion': MathspeakKoreanUtil.decreasedOrdinalConversion,
-        'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion
+        'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion,
+        'CGFdepthConstraint' : MathspeakKoreanUtil.generateDepthConstraint
       });
 }
 
