@@ -314,7 +314,6 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @return The constraint string.
  */
  export function generateDepthConstraint(node: Element): string[] {
-
   return evalDepth(node) > 3 ? ['false'] : [];
 }
 
@@ -325,19 +324,15 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @return The constraint string.
  */
  export function evalDepth(node: Element): number {
-
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let max = 0;
-
-  if(!children.length){
-    return 0;
+  if(children.length){
+    children.forEach(function (x) {
+      evalDepth(x) > max ? max = evalDepth(x) : max;
+    });
+    return 1 + max;
   }
-  
-  children.forEach(function (x) {
-    evalDepth(x) > max ? max = evalDepth(x) : max;
-  });
-
-  return 1 + max;
+  return 0;
 }
 
 }
