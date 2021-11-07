@@ -314,7 +314,9 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @return The constraint string.
  */
  export function generateDepthConstraint(node: Element): string[] {
-  return evalDepth(node) > 3 ? ['false'] : [];
+  
+
+  return [];
 }
 
 /**
