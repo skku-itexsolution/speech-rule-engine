@@ -315,10 +315,31 @@ export function decreasedOrdinalConversion(node: Element): string {
  */
  export function generateDepthConstraint(node: Element): string[] {
 
-  let children = XpathUtil.evalXPath('children/*', node) as Element[];
-  let content = XpathUtil.evalXPath('content/*', node) as Element[];
+  console.log(evalDepth(node));
+  
+  return evalDepth(node) > 3 ? ['false'] : [];
+}
 
-  return ['text()!=\"≠\"'];
+/**
+ * Generate a constraint that cancels mathspeak rules
+ * according to the depth of the tree.
+ * @param node The current node
+ * @return The constraint string.
+ */
+ export function evalDepth(node: Element): number {
+
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  let max = 0;
+
+  if(!children.length){
+    return 0;
+  }
+  
+  children.forEach(function (x) {
+    evalDepth(x) > max ? max = evalDepth(x) : max;
+  });
+
+  return 1 + max;
 }
 
 }
