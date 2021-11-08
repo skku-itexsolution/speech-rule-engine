@@ -334,9 +334,9 @@ export function decreasedOrdinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let max = 0;
   let cur = 0;
-  if(!children.length){
-    return 0;
-  }
+  // if(!children.length){
+  //   return 0;
+  // }
   children.forEach(function (x) {
     cur = evalDepth(x);
     cur > max ? max = cur : max;
