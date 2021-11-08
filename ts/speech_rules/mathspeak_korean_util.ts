@@ -333,11 +333,13 @@ export function decreasedOrdinalConversion(node: Element): string {
  export function evalDepth(node: Element): number {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let max = 0;
+  let cur = 0;
   if(!children.length){
     return 0;
   }
   children.forEach(function (x) {
-    evalDepth(x) > max ? max = evalDepth(x) : max;
+    cur = evalDepth(x);
+    cur > max ? max = cur : max;
   });
   return 1 + max;
 }
