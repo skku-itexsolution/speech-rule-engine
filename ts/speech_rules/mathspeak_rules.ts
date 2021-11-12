@@ -140,6 +140,6 @@ export function MathspeakRules() {
       'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
       'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
       
-      'CGFdepthConstraint' : MathspeakKoreanUtil.generateDepthConstraint
+      "CQFdepthConstraint": MathspeakKoreanUtil.generateDepthConstraint,
     });
 }

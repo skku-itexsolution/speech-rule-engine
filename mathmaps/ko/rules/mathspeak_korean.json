@@ -126,7 +126,7 @@
       "self::relseq",
       "count(./children/*)=2",
       "content/*[1]=\"≥\"",
-      "CGFdepthConstraint"
+      "CQFdepthConstraint"
     ],
     [
       "Precondition",
@@ -135,7 +135,7 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\"≤\"'",
-      "CGFdepthConstraint"
+      "CQFdepthConstraint"
     ],
     [
       "Precondition",
@@ -144,7 +144,7 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\">\"",
-      "CGFdepthConstraint"
+      "CQFdepthConstraint"
     ],
     [
       "Precondition",
@@ -153,7 +153,7 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\"<\"",
-      "CGFdepthConstraint"
+      "CQFdepthConstraint"
     ],
     [
       "Precondition",
@@ -186,7 +186,7 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\"≠\"",
-      "CGFdepthConstraint"
+      "CQFdepthConstraint"
     ],
     [
       "Precondition",

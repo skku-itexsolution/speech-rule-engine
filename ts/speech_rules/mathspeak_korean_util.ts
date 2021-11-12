@@ -307,23 +307,12 @@ export function decreasedOrdinalConversion(node: Element): string {
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
 }
 
-/**
- * Generate a constraint that cancels mathspeak rules
- * according to the depth of the tree.
- * @param node The current node
- * @return The constraint string.
- */
+/*
  export function generateDepthConstraint(node: Element): string[] {
-
-  /*
-  if(evalDepth(node) == 0){
-    return ['false'];
-  }
-  else{
-    return [];
-  }*/
+  // role 종류, string 길이, depth
   return evalDepth(node) > 3 ? ['false'] : [];
 }
+*/
 
 /**
  * Generate a constraint that cancels mathspeak rules
@@ -331,9 +320,11 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @param node The current node
  * @return The constraint string.
  */
+ export function generateDepthConstraint(node: Element): Element[] {
+  return (evalDepth(node) > 3) ? [node] : [];
+}
+
  export function evalDepth(node: Element): number {
-  return 4;
-  /*
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let max = 0;
   let cur = 0;
@@ -345,7 +336,6 @@ export function decreasedOrdinalConversion(node: Element): string {
     return 1 + max;
   }
   return 0;
-  */
 }
 
 }
