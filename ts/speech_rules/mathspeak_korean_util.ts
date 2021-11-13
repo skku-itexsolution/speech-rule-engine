@@ -321,16 +321,24 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @return The constraint string.
  */
  export function generateDepthConstraint(node: Element): Element[] {
-  return (evalDepth(node) > 3) ? [] : [node];
+  let roleList: string[] = [];
+  let depth = evalDepth(node, roleList);
+  return roleList.length > 5 ? [] : [node];
+  //return (depth > 3) ? [] : [node];
 }
 
- export function evalDepth(node: Element): number {
+ export function evalDepth(node: Element, roleList: string[]): number {
+  let role = node.getAttribute("role");
+  var index = roleList.indexOf(role) > -1;
+  if (!index) {
+    roleList.push(role);
+  }
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let max = 0;
   let cur = 0;
   if(children.length){
     children.forEach(function (x) {
-      cur = evalDepth(x);
+      cur = evalDepth(x, roleList);
       cur > max ? max = cur : max;
     });
     return 1 + max;
