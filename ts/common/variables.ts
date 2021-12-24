@@ -27,11 +27,6 @@ export class Variables {
   /**
    * List of locales to load.
    */
-<<<<<<< HEAD
-  public static readonly LOCALES: string[] =
-      ['en', 'de', 'fr', 'es', 'hi', 'it', 'ko', 'nemeth'];
-
-=======
   public static readonly LOCALES: string[] = [
     'en',
     'ca',
@@ -40,11 +35,11 @@ export class Variables {
     'es',
     'hi',
     'it',
+    'ko',
     'nb',
     'nn',
     'nemeth'
   ];
->>>>>>> upstream/develop
 
   /**
    * MathJax version. This is useful for paths depending on MathJax

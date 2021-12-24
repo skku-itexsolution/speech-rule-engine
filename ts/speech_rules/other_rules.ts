@@ -20,7 +20,7 @@
 
 import { SpeechRuleStore } from '../rule_engine/speech_rule_store';
 import * as StoreUtil from '../rule_engine/store_util';
-import MathspeakKoreanUtil from './mathspeak_korean_util';
+import * as MathspeakKoreanUtil from './mathspeak_korean_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NemethUtil from './nemeth_util';
 import * as NumbersUtil from './numbers_util';
@@ -45,25 +45,15 @@ export function OtherRules() {
     CTFcontentIterator: StoreUtil.contentIterator
   });
 
-<<<<<<< HEAD
-  SpeechRules.addStore(
-      'en.speech.emacspeak', 'en.speech.chromevox', {
-        'CQFvulgarFractionSmall': MathspeakUtil.isSmallVulgarFraction,
-        'CSFvulgarFraction': NumbersUtil.vulgarFraction
-      });
-
-  SpeechRules.addStore(
-      'ko.summary.', 'ko.speech.mathspeak', { 
-        'CSFordinalConversion': MathspeakKoreanUtil.ordinalConversion,
-        'CSFdecreasedOrdinalConversion': MathspeakKoreanUtil.decreasedOrdinalConversion,
-        'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion
-      });
-=======
   SpeechRules.addStore('en.speech.emacspeak', 'en.speech.chromevox', {
     CQFvulgarFractionSmall: MathspeakUtil.isSmallVulgarFraction,
     CSFvulgarFraction: NumbersUtil.vulgarFraction
   });
->>>>>>> upstream/develop
+  SpeechRules.addStore('ko.summary.', 'ko.speech.mathspeak', { 
+    CSFordinalConversion: MathspeakKoreanUtil.ordinalConversion,
+    CSFdecreasedOrdinalConversion: MathspeakKoreanUtil.decreasedOrdinalConversion,
+    CSFlistOrdinalConversion: MathspeakKoreanUtil.listOrdinalConversion
+  });
 }
 
 /**
