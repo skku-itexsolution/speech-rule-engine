@@ -108,19 +108,10 @@ function create(): Locale {
   };
   loc.CORRECTIONS.lowercase = (name: string) => name.toLowerCase();
   loc.CORRECTIONS.article = (name: string) => {
-<<<<<<< HEAD
-    let decl = Grammar.getInstance().getParameter('case');
-    let plural = Grammar.getInstance().getParameter('plural');
-    if (decl === 'dative') {
-      return {'der': 'dem',
-              'die': (plural ? 'den' : 'der'),
-              'das': 'dem'}[name];
-=======
     const decl = Grammar.getInstance().getParameter('case');
     const plural = Grammar.getInstance().getParameter('plural');
     if (decl === 'dative') {
       return { der: 'dem', die: plural ? 'den' : 'der', das: 'dem' }[name];
->>>>>>> upstream/develop
     }
     return name;
   };
