@@ -51,9 +51,6 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
-  if (num === 0) {
-    return NUMBERS.zero;
-  }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
@@ -62,8 +59,8 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 10000;
     if (hundreds) {
-      str = hundredsToWords_(num % 10000) +
-          (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') + str;
+      str = str + hundredsToWords_(num % 10000) +
+          (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '');
     }
     num = Math.floor(num / 10000);
     pos++;
@@ -80,9 +77,8 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
-  let str = wordOrdinal(num);
-  num === 1 ? str = '첫' : (num === 0 ? str = '영' : str);
-  return str + '번째';
+  if (num === 1) return '첫번째';
+  return wordOrdinal(num) + '번째';
 }
 
 
@@ -92,6 +88,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
+  if (num === 0) return '영';
   let ordinal = numberToWords(num);
   num %= 100; let label = numberToWords(num);
   if (!label) return ordinal;
