@@ -49,6 +49,7 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
+  if (num === 0) return NUMBERS.zero;
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
@@ -86,10 +87,9 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  if (num === 0) return NUMBERS.zero;
   let ordinal = numberToWords(num);
   num %= 100; let label = numberToWords(num);
-  if (!label) return ordinal;
+  if (!label || label === NUMBERS.zero) return ordinal;
   let tens = NUMBERS.tens[10 + Math.floor(num / 10)];
   let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
   if (num === 20) tens = '스무';
