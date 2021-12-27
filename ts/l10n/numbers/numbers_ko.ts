@@ -37,9 +37,7 @@ function hundredsToWords_(num: number): string {
     str += NUMBERS.ones[Math.floor(n / 100)] ?
       NUMBERS.ones[Math.floor(n / 100)] + '백' : '';
     n = n % 100;
-    str += NUMBERS.ones[n] ||
-        NUMBERS.tens[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.ones[n % 10] : '');
+    str += NUMBERS.tens[Math.floor(n / 10)] + (n % 10 ? NUMBERS.ones[n % 10] : '');
   }
   return str;
 }
@@ -88,7 +86,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  if (num === 0) return '영';
+  if (num === 0) return NUMBERS.zero;
   let ordinal = numberToWords(num);
   num %= 100; let label = numberToWords(num);
   if (!label) return ordinal;
