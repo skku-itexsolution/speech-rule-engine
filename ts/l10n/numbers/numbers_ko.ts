@@ -59,8 +59,8 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 10000;
     if (hundreds) {
-      str = str + hundredsToWords_(num % 10000) +
-          (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '');
+      str = hundredsToWords_(num % 10000) +
+          (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') + str;
     }
     num = Math.floor(num / 10000);
     pos++;
