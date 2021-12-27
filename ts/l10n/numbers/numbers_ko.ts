@@ -50,9 +50,7 @@ function hundredsToWords_(num: number): string {
  */
 function numberToWords(num: number): string {
   if (num === 0) return NUMBERS.zero;
-  if (num >= Math.pow(10, 36)) {
-    return num.toString();
-  }
+  if (num >= Math.pow(10, 36)) return num.toString();
   let pos = 0;
   let str = '';
   while (num > 0) {
