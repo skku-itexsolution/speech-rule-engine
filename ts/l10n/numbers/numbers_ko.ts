@@ -31,11 +31,11 @@ function hundredsToWords_(num: number): string {
   let n = num % 10000;
   let str = '';
   str += NUMBERS.ones[Math.floor(n / 1000)] ?
-      NUMBERS.ones[Math.floor(n / 1000)] + '천' : '';
+      (Math.floor(n / 1000) === 1 ? '천' : NUMBERS.ones[Math.floor(n / 1000)] + '천') : '';
   n = n % 1000;
   if (n) {
     str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + '백' : '';
+      (Math.floor(n / 100) === 1 ? '백' : NUMBERS.ones[Math.floor(n / 100)] + '백') : '';
     n = n % 100;
     str += NUMBERS.tens[Math.floor(n / 10)] + (n % 10 ? NUMBERS.ones[n % 10] : '');
   }
@@ -49,12 +49,8 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
-  if (num === 0) {
-    return NUMBERS.zero;
-  }
-  if (num >= Math.pow(10, 36)) {
-    return num.toString();
-  }
+  if (num === 0) return NUMBERS.zero;
+  if (num >= Math.pow(10, 36)) return num.toString();
   let pos = 0;
   let str = '';
   while (num > 0) {
