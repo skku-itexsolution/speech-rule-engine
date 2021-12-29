@@ -18,16 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-//
-// This work was sponsored by TextHelp
-//
-
 import * as MathspeakUtil from './mathspeak_util';
 import {LOCALE} from '../l10n/locale';
-import XpathUtil from '../common/xpath_util';
-
-
-namespace MathspeakKoreanUtil {
+import * as XpathUtil from '../common/xpath_util';
 
 /**
  * Computes disambiguations for nested fractions.
@@ -343,7 +336,3 @@ export function getDepthValue(node: Element, roleList: string[]): number {
   return 0;
 }
 //TODO: use as a custom function if needed.
-
-}
-
-export default MathspeakKoreanUtil;
