@@ -5,7 +5,7 @@ name: Tests
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ symbols ]
   pull_request:
     branches: [ develop ]
 
