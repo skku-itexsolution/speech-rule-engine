@@ -1,4 +1,3 @@
 [submodule "sre-tests"]
 	path = sre-tests
 	url = https://github.com/skku-itexsolution/sre-tests
-	branch = sync_fork

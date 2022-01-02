@@ -54,41 +54,19 @@ function create(): Locale {
    */
   loc.CORRECTIONS.postposition = (name: string) => {
     if (['같다', '는', '와', '를', '로'].includes(name)) return name;
-    
     let char = name.slice(-1);
-    
     let value = (char.charCodeAt(0) - 44032) % 28;
     let final = (value > 0) ? true : false;
     if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
-    
     Grammar.getInstance().setParameter('final', final);
     return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
-    
     if (name === '같다') name = '는';
     let temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
-
     return (temp !== undefined && final) ? temp : name;
   }
-  /*
-  loc.CORRECTIONS.postposition = (name: string) => {
-    if (name === '같다') name = '는';
-    let temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
-    if (temp !== undefined) {
-      return Grammar.getInstance().getParameter('final') ? temp : name;
-    }
-
-    let char = name.slice(-1);
-    let value = (char.charCodeAt(0) - 44032) % 28;
-    
-    final = (value > 0) ? true : false;
-    if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
-    Grammar.getInstance().setParameter('final', final);
-    return name;
-  }
-  */
   
   return loc;
 }
