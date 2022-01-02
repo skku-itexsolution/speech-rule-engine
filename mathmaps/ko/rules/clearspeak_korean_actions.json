@@ -1637,7 +1637,7 @@
     [
       "Action",
       "cancel-under",
-      "[n] children/*[1]/children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"소거\""
+      "[n] children/*[2]/children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] children/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"소거\""
     ],
     [
       "Action",
