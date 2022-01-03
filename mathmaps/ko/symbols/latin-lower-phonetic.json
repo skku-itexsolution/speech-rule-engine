@@ -22,7 +22,7 @@
     "key": "0127",
     "mappings": {
       "default": {
-        "default": "획을 그은 a치"
+        "default": "획을 그은 h"
       }
     }
   },
@@ -886,7 +886,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": "거꾸로된 a치"
+        "default": "거꾸로된 h"
       }
     }
   },
@@ -895,7 +895,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": "후크가 있는 a치"
+        "default": "후크가 있는 h"
       }
     }
   },
