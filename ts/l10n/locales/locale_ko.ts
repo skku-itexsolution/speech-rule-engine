@@ -20,8 +20,8 @@
  */
 
 
-import {Grammar} from '../../rule_engine/grammar';
-import {createLocale, Locale} from '../locale';
+import { Grammar } from '../../rule_engine/grammar';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_ko';
 import * as tr from '../transformers';
 
@@ -39,11 +39,11 @@ export function ko(): Locale {
 function create(): Locale {
   let loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.FUNCTIONS.plural = function(unit: string) { return unit };
+  loc.FUNCTIONS.plural = function (unit: string) { return unit };
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     return prefix + unit;
   };
-  loc.FUNCTIONS.combineRootIndex = function(index: string, postfix: string) {
+  loc.FUNCTIONS.combineRootIndex = function (index: string, postfix: string) {
     return index + postfix;
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
@@ -57,22 +57,17 @@ function create(): Locale {
    */
   loc.CORRECTIONS.postposition = (name: string) => {
     if (['같다', '는', '와', '를', '로'].includes(name)) return name;
-    
     let char = name.slice(-1);
-    
     let value = (char.charCodeAt(0) - 44032) % 28;
     let final = (value > 0) ? true : false;
     if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
-    
     Grammar.getInstance().setParameter('final', final);
     return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
-    
     if (name === '같다') name = '는';
-    let temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
-
+    let temp = { '는': '은', '와': '과', '를': '을', '로': '으로' }[name];
     return (temp !== undefined && final) ? temp : name;
   }
 

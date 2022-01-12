@@ -1,4 +1,7 @@
-[{"locale": "ko"},
+[
+  {
+    "locale": "ko"
+  },
   {
     "category": "Ll",
     "key": "00F8",
